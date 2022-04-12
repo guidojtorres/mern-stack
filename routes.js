@@ -4,7 +4,6 @@ const dbo = require('./db')
 const {ObjectID} = require("mongodb");
 
 
-
 router.route('/api/comentarios/:movie_id').get(async function (req, res) {
     const dbConnect = dbo.getDb();
 
@@ -78,5 +77,7 @@ router.route('/api/borrarComentario').delete((req, res) => {
             }
         })
 })
+
+
 
 module.exports = router;
